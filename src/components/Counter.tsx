@@ -8,14 +8,15 @@ interface IProductData {
 
 const Counter: React.FC<IProductData> = ({ product }) => {
   const dispatch = useAppDispatch();
-  const { id, title, price } = product;
+  const {  title, price,thumbnail } = product;
   return (
     <div className=" ">
-      <div className="flex items-center justify-center  rounded-2xl my-10 text-center space-x-3 text-black bg-white">
+      <div className="flex items-center justify-center 
+      rounded-2xl my-2 text-center space-x-3 text-black bg-white">
         <div className="text-lg font-bold p-3">
-          <div>ID: {id}</div>
-          <div>Title: {title}</div>
           <div>Price: {price}</div>
+          <img className="" src={thumbnail} />
+          <div>{title}</div>
         </div>
       </div>
       <Button fullWidth onClick={() => dispatch(addItemToCartAction(product))}>

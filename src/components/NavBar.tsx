@@ -3,7 +3,6 @@ import { RootState } from "../store/Store";
 
 const NavBar = () => {
   const { cartItem } = useSelector(({ cart }: RootState) => cart);
-  console.log(cartItem.length);
 
   return (
     <nav className="bg-indigo-600 max-w-4xl mx-auto mt-7 mb-20 px-3 py-5 rounded-md">
